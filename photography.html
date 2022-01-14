@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	 Prologue by HTML5 UP
+	 html5up.net | @ajlkn
+	 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MT C0re Dumped. | Photography</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/lightbox.min.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+		<script src="assets/js/lightbox-plus-jquery.min.js"></script>
+        <script>
+         String.format = function() {
+             var s = arguments[0];
+             for (var i = 0; i < arguments.length - 1; i++) {
+                 var reg = new RegExp("\\{" + i + "\\}", "gm");
+                 s = s.replace(reg, arguments[i + 1]);
+             }
+
+             return s;
+         };
+
+         // Load from gallery
+         var photoTemplate = '<article class="item"> ' +
+                             '<a href="gallery/{0}/{1}/{2}" data-lightbox="gallery"' +
+                             'data-title="{3} [{4} | {0}.{1}]<br>{5} | {6} | {7} s | ISO {8} | {9}"' +
+                             'class="image fit"><img src="gallery/{0}/{1}/{2}" width="420px" height="auto" loading="lazy" alt="{3}" /></a>' +
+                             '<header><h3>{3}</h3></header></article>';
+         $.getJSON('gallery.json', function(gallery) {
+             $.each(gallery, function(i, metadata) {
+                 $('.gallery').append(
+                     String.format(photoTemplate, metadata['year'], metadata['month'], metadata['file'],
+                                   metadata['title'], metadata['location'],
+                                   metadata['camera'], metadata['aperture'],
+                                   metadata['ss'], metadata['iso'], metadata['lens']))
+             });
+         });
+        </script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<div id="header">
+			<div class="top">
+				<!-- Logo -->
+				<div id="logo">
+					<h1 id="title">MatthewZMD</h1>
+					<p>Free Software Developer, Photographer</p>
+				</div>
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html" id="home-link"><span class="icon solid fa-home">Welcome</span></a></li>
+                        <li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+						<li><a href="" id="photography-link"><span class="icon solid fa-camera">Photography</span></a></li>
+						<li><a href="" id="blog-link"><span class="icon solid fa-newspaper">Blog</span></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="bottom">
+				<!-- Social Icons -->
+				<ul class="icons">
+				    <li><a href="https://github.com/matthewzmd" target="_blank" rel="noopener noreferrer" class="icon brands fa-github fa-2x"><span class="label">Github</span></a></li>
+				    <li><a href="https://www.linkedin.com/in/matthewzmd/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin fa-2x"><span class="label">Linkedin</span></a></li>
+				    <li><a href="mailto:matthewzmd@posteo.net" class="icon solid fa-envelope fa-2x"><span class="label">Email</span></a></li>
+				    <li><a href="https://www.instagram.com/mt.photographyx/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram fa-2x"><span class="label">Instagram</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Intro -->
+			<section id="top" class="one phototop dark cover">
+				<div class="container">
+					<header>
+						<h2 class="alt">Photography</h2>
+						<p>Street photography, and sometimes other stuff</p>
+					</header>
+				</div>
+			</section>
+
+			<!-- Photography -->
+			<script>
+			 lightbox.option({
+				 'wrapAround': true
+			 })
+			</script>
+
+            <section id="gallery" class="two">
+				<div class="container">
+					<div class="gallery">
+		            </div>
+		        </div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<!-- Icons -->
+			<ul class="icons">
+				<li><a href="https://github.com/matthewzmd" target="_blank" rel="noopener noreferrer" class="icon brands fa-github fa-2x"><span class="label">Github</span></a></li>
+				<li><a href="https://www.linkedin.com/in/matthewzmd/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin fa-2x"><span class="label">Linkedin</span></a></li>
+				<li><a href="mailto:matthewzmd@posteo.net" class="icon solid fa-envelope fa-2x"><span class="label">Email</span></a></li>
+				<li><a href="https://www.instagram.com/mt.photographyx/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram fa-2x"><span class="label">Instagram</span></a></li>
+			</ul>
+		    <!-- Copyright -->
+		    <ul class="copyright">
+			    <li>&copy; 2022 Mingde Zeng. All rights reserved.</li>
+            </ul>
+		</div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+        <script src="assets/js/masonry.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script>
+         window.setTimeout(function() {
+             var $grid = $('.gallery').masonry({
+                 itemSelector: '.item'
+             });
+             // layout Masonry after each image loads
+             $grid.imagesLoaded().progress( function() {
+                 $grid.masonry('layout');
+             });
+         }, 0);
+        </script>
+	</body>
+</html>
