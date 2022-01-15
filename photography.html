@@ -129,16 +129,5 @@
 		<script src="assets/js/main.js"></script>
         <script src="assets/js/masonry.pkgd.min.js"></script>
         <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script>
-         window.setTimeout(function() {
-             var $grid = $('.gallery').masonry({
-                 itemSelector: '.item'
-             });
-             // layout Masonry after each image loads
-             $grid.imagesLoaded().progress( function() {
-                 $grid.masonry('layout');
-             });
-         }, 0);
-        </script>
 	</body>
 </html>

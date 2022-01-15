@@ -24,6 +24,14 @@
 		window.setTimeout(function() {
 			$body.removeClass('is-preload');
 		}, 100);
+
+        var $grid = $('.gallery').masonry({
+            itemSelector: '.item'
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry('layout');
+        });
 	});
 
 	// Nav.
