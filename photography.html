@@ -25,6 +25,7 @@
              return s;
          };
 
+         console.log("Loading photos from gallery.")
          // Load from gallery
          var photoTemplate = '<article class="item"> ' +
                              '<a href="gallery/{0}/{1}/{2}" data-lightbox="gallery"' +
@@ -32,6 +33,7 @@
                              'class="image fit"><img src="gallery/{0}/{1}/{2}" width="420px" height="auto" loading="lazy" alt="{3}" /></a>' +
                              '<header><h3>{3}</h3></header></article>';
          $.getJSON('gallery.json', function(gallery) {
+             console.log("There are " + gallery.length + " photos to load.")
              $.each(gallery, function(i, metadata) {
                  $('.gallery').append(
                      String.format(photoTemplate, metadata['year'], metadata['month'], metadata['file'],
@@ -39,6 +41,7 @@
                                    metadata['camera'], metadata['aperture'],
                                    metadata['ss'], metadata['iso'], metadata['lens']))
              });
+             console.log("Photos loaded.")
          });
         </script>
 	</head>
