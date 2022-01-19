@@ -102,6 +102,12 @@
 
 		});
 
+    $('#verse').text(function() {
+        var verses = ["A most(ly) complete edition of my journey",
+                      "The art of freezing space and time"];
+        return verses[Math.round(Math.random()*100) % verses.length];
+    });
+
 	// Scrolly.
 	$('.scrolly').scrolly();
 
