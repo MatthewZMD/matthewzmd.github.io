@@ -25,8 +25,9 @@ do
     for FILE in $(fd --extension jpeg --extension jpg --full-path $full_path)
     do
         # 100% Optimize full files
-        jpegoptim -p -P -q $FILE
+        jpegoptim -p -P $FILE
         # Create Thumbnails
         convert -resize 10% $FILE $thumb_path/$(basename $FILE)
+        echo "Thumbnail created at" $1/$month/$(basename $FILE)
     done
 done

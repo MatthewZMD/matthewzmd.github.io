@@ -1,5 +1,29 @@
 [
     {
+        "file": "DSCF7037.JPG",
+        "title": "Untitled",
+        "location": "Richmond Hill, Ontario",
+        "year": "2022",
+        "month": "01",
+        "camera": "Fujifilm XPro3",
+        "aperture": "f/1.2",
+        "ss": "1/8000",
+        "iso": "160",
+        "lens": "Fujinon XF56mmf1.2"
+    },
+    {
+        "file": "DSCF6902-01.jpeg",
+        "title": "Gaze",
+        "location": "Blue Mountains, Ontario",
+        "year": "2021",
+        "month": "12",
+        "camera": "Fujifilm XPro3",
+        "aperture": "f/1,2",
+        "ss": "1/599",
+        "iso": "400",
+        "lens": "Fujinon XF56mmf1.2"
+    },
+    {
         "file": "DSCF6963-01.jpeg",
         "title": "Abandoned Basketball Court",
         "location": "Blue Mountains, Ontario",
@@ -47,7 +71,7 @@
         "iso": "250",
         "lens": "Fujinon XF23mmf2"
     },
-{
+    {
         "file": "DSCF6576-01.jpeg",
         "title": "Red Bull",
         "location": "Toronto, Ontario",
