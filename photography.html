@@ -28,10 +28,10 @@
          console.log("Loading photos from gallery.")
          // Load from gallery
          var photoTemplate = '<article class="item"> ' +
-                             '<a href="gallery/{0}/{1}/{2}" data-lightbox="gallery"' +
-                             'data-title="{3} [{4} | {0}.{1}]<br>{5} | {6} | {7} s | ISO {8} | {9}"' +
-                             'class="image fit"><img src="gallery/{0}/{1}/{2}" width="420px" height="auto" loading="lazy" alt="{3}" /></a>' +
-                             '<header><h3>{3}</h3></header></article>';
+                             '<a href="gallery/full/{0}/{1}/{2}" data-lightbox="gallery" data-title="{3} [{4} | {0}.{1}]<br>{5} | {6} | {7} s | ISO {8} | {9}"' +
+                             'class="image fit"><img src="gallery/thumbnail/{0}/{1}/{2}" width="420px" height="auto" loading="lazy" alt="{3}" /></a>' +
+                             '<header><h3>{3}</h3></header>' +
+                             '</article>';
          $.getJSON('gallery.json', function(gallery) {
              console.log("There are " + gallery.length + " photos to load.")
              $.each(gallery, function(i, metadata) {
