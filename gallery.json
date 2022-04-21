@@ -1,5 +1,41 @@
 [
     {
+        "file": "DSCF8126.jpeg",
+        "title": "A Day in Paris",
+        "location": "Paris, Ontario",
+        "year": "2022",
+        "month": "04",
+        "camera": "Fujifilm XPro3",
+        "aperture": "f/1.2",
+        "ss": "1/1000",
+        "iso": "160",
+        "lens": "Fujinon XF56mmf1.2"
+    },
+    {
+        "file": "DSCF8198.jpeg",
+        "title": "Untitled",
+        "location": "Paris, Ontario",
+        "year": "2022",
+        "month": "04",
+        "camera": "Fujifilm XPro3",
+        "aperture": "f/2",
+        "ss": "1/1000",
+        "iso": "160",
+        "lens": "Fujinon XF56mmf1.2"
+    },
+    {
+        "file": "DSCF8203-01.jpeg",
+        "title": "Easter Bunny",
+        "location": "Paris, Ontario",
+        "year": "2022",
+        "month": "04",
+        "camera": "Fujifilm XPro3",
+        "aperture": "f/1.8",
+        "ss": "1/1000",
+        "iso": "160",
+        "lens": "Fujinon XF56mmf1.2"
+    },
+    {
         "file": "DSCF8011.JPG",
         "title": "Untitled",
         "location": "Waterloo, Ontario",
