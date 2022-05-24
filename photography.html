@@ -28,7 +28,7 @@
          console.log("Loading photos from gallery.")
          // Load from gallery
          var photoTemplate = '<article class="item"> ' +
-                             '<a href="gallery/full/{0}/{1}/{2}" data-lightbox="gallery" data-title="{3} [{4} | {0}.{1}]<br>{5} | {6} | {7} s | ISO {8} | {9}"' +
+                             '<a href="gallery/full/{0}/{1}/{2}" data-lightbox="gallery" data-title="{3} [{4} | {0}.{1}] {10}<br>{5} | {6} | {7} s | ISO {8} | {9}"' +
                              'class="image fit"><img src="gallery/thumbnail/{0}/{1}/{2}" width="420px" height="auto" loading="lazy" alt="{3}" /></a>' +
                              '<header><h3>{3}</h3></header>' +
                              '</article>';
@@ -37,9 +37,8 @@
              $.each(gallery, function(i, metadata) {
                  $('.gallery').append(
                      String.format(photoTemplate, metadata['year'], metadata['month'], metadata['file'],
-                                   metadata['title'], metadata['location'],
-                                   metadata['camera'], metadata['aperture'],
-                                   metadata['ss'], metadata['iso'], metadata['lens']))
+                                   metadata['title'], metadata['location'], metadata['camera'],
+                                   metadata['aperture'], metadata['ss'], metadata['iso'], metadata['lens'], metadata['desc']))
              });
              console.log("Photos loaded.")
          });

@@ -14,11 +14,13 @@ parser.add_argument("--month", nargs='+', default='',
 parser.add_argument("--file", nargs='+', default='',
                     help='file name')
 parser.add_argument("--title", nargs='+', default='',
-                    help='file title')
+                    help='file title (default Untitled)')
 parser.add_argument("--location", nargs='+', default='',
                     help='file location')
 parser.add_argument("--camera", nargs='+', default='',
                     help='file camera')
+parser.add_argument("--desc", nargs='+', default='',
+                    help='file description (optional)')
 args = parser.parse_args()
 
 def run_command(command, path, ensure_pass=True, get_result=False):
@@ -53,7 +55,8 @@ def main():
         'aperture': '',
         'ss': '',
         'iso': '',
-        'lens': ''
+        'lens': '',
+        'desc': ''
     }
 
     if len(args.year) == 0 or len(args.month) == 0 or len(args.file) == 0:
@@ -65,6 +68,8 @@ def main():
 
     if len(args.title) > 0:
         meta_json['title'] = ' '.join(args.title)
+    if len(args.desc) > 0:
+        meta_json['desc'] = ' '.join(args.desc)
     if len(args.location) > 0:
         meta_json['location'] = ' '.join(args.location)
     if len(args.camera) > 0:
