@@ -7,19 +7,19 @@ import subprocess
 import json
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--year", nargs='+', default='',
+parser.add_argument("--year", nargs='+', type=str, default='',
                     help='file year')
-parser.add_argument("--month", nargs='+', default='',
+parser.add_argument("--month", nargs='+', type=str, default='',
                     help='file month')
-parser.add_argument("--file", nargs='+', default='',
-                    help='file name')
-parser.add_argument("--title", nargs='+', default='',
-                    help='file title (default Untitled)')
-parser.add_argument("--location", nargs='+', default='',
+parser.add_argument("--camera", nargs='+', type=str, default='',
+                    help='file camera (default Fujifilm XPro3)')
+parser.add_argument("--location", nargs='+', type=str, default='',
                     help='file location')
-parser.add_argument("--camera", nargs='+', default='',
-                    help='file camera')
-parser.add_argument("--desc", nargs='+', default='',
+parser.add_argument("--file", nargs='+', type=str, default='',
+                    help='file name')
+parser.add_argument("--title", nargs='+', type=str, default='',
+                    help='file title (default Untitled)')
+parser.add_argument("--desc", nargs='+', type=str, default='',
                     help='file description (optional)')
 args = parser.parse_args()
 
