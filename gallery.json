@@ -234,32 +234,6 @@
     "desc": ""
 },
     {
-    "file": "DSCF6857-01.jpeg",
-    "title": "Untitled",
-    "location": "Matanzas, Cuba",
-    "year": "2022",
-    "month": "05",
-    "camera": "Fujifilm XPro3",
-    "aperture": "f/2.8",
-    "ss": "1/1000",
-    "iso": "320",
-    "lens": "Fujinon XF23mmf2",
-    "desc": ""
-},
-    {
-    "file": "DSCF6913.JPG",
-    "title": "Cuba Libre",
-    "location": "Matanzas, Cuba",
-    "year": "2022",
-    "month": "05",
-    "camera": "Fujifilm XPro3",
-    "aperture": "f/4.5",
-    "ss": "1/1000",
-    "iso": "320",
-    "lens": "Fujinon XF23mmf2",
-    "desc": ""
-},
-    {
     "file": "DSCF5030-1-01.jpeg",
     "title": "Untitled",
     "location": "Matanzas, Cuba",
@@ -269,6 +243,19 @@
     "aperture": "f/4.5",
     "ss": "1/1000",
     "iso": "400",
+    "lens": "Fujinon XF23mmf2",
+    "desc": ""
+},
+    {
+    "file": "DSCF6857-01.jpeg",
+    "title": "Untitled",
+    "location": "Matanzas, Cuba",
+    "year": "2022",
+    "month": "05",
+    "camera": "Fujifilm XPro3",
+    "aperture": "f/2.8",
+    "ss": "1/1000",
+    "iso": "320",
     "lens": "Fujinon XF23mmf2",
     "desc": ""
 },
@@ -314,6 +301,19 @@
     {
     "file": "DSCF6877-01.jpeg",
     "title": "Untitled",
+    "location": "Matanzas, Cuba",
+    "year": "2022",
+    "month": "05",
+    "camera": "Fujifilm XPro3",
+    "aperture": "f/4.5",
+    "ss": "1/1000",
+    "iso": "320",
+    "lens": "Fujinon XF23mmf2",
+    "desc": ""
+},
+    {
+    "file": "DSCF6913.JPG",
+    "title": "Cuba Libre",
     "location": "Matanzas, Cuba",
     "year": "2022",
     "month": "05",
@@ -1001,7 +1001,7 @@
     "desc": ""
 },
     {
-    "file": "DSCF0470.JPG",
+    "file": "DSCF0470-02.jpeg",
     "title": "Man on the Bus",
     "location": "New York City",
     "year": "2022",
