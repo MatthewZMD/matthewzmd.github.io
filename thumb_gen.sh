@@ -5,8 +5,7 @@
 function optimize() {
     jpegoptim -o --strip-exif -p -P -S1900 $1
     convert $1 -gravity South -pointsize 30 -font Helvetica -fill "#cee3f8" -annotate +1+50 "(C) Ming De Zeng" $1
-    convert $1 -quality 10% $2
-    exiftool -EXIF= $2
+    convert $1 -thumbnail 250x250 +repage -unsharp 0x.5 -quality 80 $2
 }
 
 gallery_dir=$(git rev-parse --show-toplevel)/gallery
@@ -35,7 +34,7 @@ do
     thumb_path=$gallery_dir/thumbnail/$1/$month
     [ -d $full_path ] && mkdir -p $thumb_path
     if [ -n "$selected_file" ] && [ -f "$full_path/$selected_file" ]; then
-        optimize $full_path/$selected_file $thumb_path
+        optimize $full_path/$selected_file $thumb_path/$selected_file
     else
         if command -v fdfind &> /dev/null; then
             FIND=fdfind
@@ -50,7 +49,7 @@ do
                 mv "$FILE" "${FILE%.jpeg}.jpg"
                 FILE="${FILE%.jpeg}.jpg"
             fi
-            optimize $FILE $thumb_path
+            optimize $FILE $thumb_path/$(basename $FILE)
         done
     fi
 done
